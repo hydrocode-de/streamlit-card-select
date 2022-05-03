@@ -11,9 +11,12 @@ def version():
     cs = importlib.import_module('streamlit_card_select')
     return cs.__version__
 
+def requirements():
+    with open('requirements.txt') as f:
+        return f.read().splitlines()
 
 setup(
-    name="streamlit-card-selecr",
+    name="streamlit-card-select",
     version=version(),
     author="Mirko Mälicke",
     author_email="mirko@hydrocode.de",
@@ -25,7 +28,5 @@ setup(
     include_package_data=True,
     classifiers=[],
     python_requires=">=3.6",
-    install_requires=[
-        "streamlit >= 0.63",
-    ],
+    install_requires=requirements(),
 )

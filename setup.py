@@ -16,7 +16,7 @@ def requirements():
         return f.read().splitlines()
 
 setup(
-    name="streamlit-card-selecr",
+    name="streamlit-card-select",
     version=version(),
     author="Mirko Mälicke",
     author_email="mirko@hydrocode.de",

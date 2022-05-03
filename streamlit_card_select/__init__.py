@@ -1,5 +1,4 @@
-__version__ = "0.0.1"
-
+from streamlit_card_select.__version__ import __version__
 from streamlit_card_select.component import card_select
 
 

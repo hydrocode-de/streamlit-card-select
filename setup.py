@@ -8,8 +8,10 @@ def readme():
 
 
 def version():
-    cs = importlib.import_module('streamlit_card_select')
-    return cs.__version__
+    loc = dict()
+    with open('streamlit_card_select/__version__.py') as f:
+        exec(f.read(), loc, loc)
+    return loc.get('__version__')
 
 def requirements():
     with open('requirements.txt') as f:
